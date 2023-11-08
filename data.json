@@ -1,0 +1,19 @@
+{
+    "posts": [
+        {
+            "title": "Cachorro",
+            "description": "O cachorro é um animal dócil e muito companheiro!",
+            "author": "Amigo dos Doginhos"
+        },
+        {
+            "title":"Gato",
+            "description": "O gato é um animal conservador e reservado...",
+            "author": "Colega de Cats"
+        },
+        {
+            "title": "Aranha",
+            "description": "A única aranha amigável vive no Queens - New York.",
+            "author": "O Aracnofóbico"
+        }
+    ]
+}

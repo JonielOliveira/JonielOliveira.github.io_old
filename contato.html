@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="static/bootstrap/js/bootstrap.js">
     <title>UNES - Contato</title>
 </head>
 
@@ -40,6 +42,87 @@
         <textarea id="fdescricao" name="fdescricao" rows="1" cols="17" value=""></textarea><br>
         <input type="submit" value="Enviar" >
     </form>
+
+    <!-- <script>
+        $("#carouselNum1").carousel();
+        $("#carouselNum1").carousel({
+            interval: 2000
+        });
+        
+        $(document).ready(function(){
+            // Activate Carousel
+            $("#carouselNum1").carousel();
+                
+            // Enable Carousel Indicators
+            $(".item1").click(function(){
+                $("#carouselNum1").carousel(0);
+            });
+            $(".item2").click(function(){
+                $("#carouselNum1").carousel(1);
+            });
+            $(".item3").click(function(){
+                $("#carouselNum1").carousel(2);
+            });
+                
+            // Enable Carousel Controls
+            $(".left").click(function(){
+                $("#carouselNum1").carousel("prev");
+            });
+            $(".right").click(function(){
+                $("#carouselNum1").carousel("next");
+            });
+        });
+    </script> -->
+
+    <div id="postagens" style="text-align: center;">
+        <!-- <div id="carouselNum1" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselNum1" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselNum1" data-slide-to="1"></li>
+              <li data-target="#carouselNum1" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-50" src="/static/img/capa.png" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-50" src="/static/img/capa.png" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-50" src="/static/img/logo.png" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselNum1" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselNum1" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Próximo</span>
+            </a>
+          </div> -->
+        <!-- <div class="carousel-item">
+            <img src="..." alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>...</h5>
+              <p>...</p>
+            </div>
+          </div> -->
+    </div>
+
+    <script>
+        let divPostagens = document.querySelector("#postagens")
+
+        fetch("data.json").then((response) => {
+            response.json().then((data) =>{
+                data.posts.map((postagem) =>{
+                    divPostagens.innerHTML += `<li> ${postagem.title} - ${postagem.description} - ${postagem.author} </li>`
+                })
+            })
+        })
+
+    </script>
+
     <div>
         <h3 style="text-align: center"><strong>Todos os direitos reservados</strong></h3>
     </div>
